@@ -10,24 +10,10 @@ function results = trainCNN_CL(layers)
 % -------------------------------------------------------------------------
 %% Gather the training data
 % Geometry input
-load Geometry_Set1.mat   geo_set
-% Uncomment only with full data
-% geo_set1 = geo_set;
-% load Geometry_Set2.mat  geo_set
-% geo_set1 = cat(5,geo_set1,geo_set);
-% load Geometry_Set3.mat  geo_set
-% geo_set1 = cat(5,geo_set1,geo_set);
-% geo_set = geo_set1;
+load Geometry_Set_set.mat   geo_set
 
 % Aero coefficients from lifting line analysis
-load LLT_Data1.mat       CL  CDi
-% Uncomment only with full data
-% CL1 = CL; CDi1 = CDi;
-% load LLT_Data2.mat       CL  CDi
-% CL1 = [CL1;CL]; CDi1 = [CDi1;CDi];
-% load LLT_Data3.mat       CL  CDi
-% CL1 = [CL1;CL]; CDi1 = [CDi1;CDi];
-% CL = CL1; CDi = CDi1;
+load LLT_Data_set.mat       CL  CDi
 
 geo_set_tr = geo_set(:,:,:,:,1:end);
 CL_train = CL(1:end)';
